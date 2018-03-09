@@ -18,6 +18,7 @@ function mapStateToProps(state){
 
 class Favorite extends React.Component{
 
+
   componentDidMount(){
     this.props.fetchData();
 }
@@ -38,12 +39,9 @@ class Favorite extends React.Component{
 render(){
     const movie_data = this.props.data;
     let fetchMovie = false;
-    let favMovies = JSON.parse(localStorage.getItem("key") || "null");
-
-    console.log("FAv Mpvoie :" + favMovies )
   const movies = movie_data.map((dynamicData,key) => {
 
-    if (favMovies === dynamicData.title ){
+    if (JSON.parse(localStorage.getItem(dynamicData.title)) === dynamicData.title ){
         fetchMovie = true;
             return (
             <MovieCardBox 
