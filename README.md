@@ -3,7 +3,9 @@
 Live Demo : (https://movieappproject.herokuapp.com/)
 
 As .gitignore ignore node_modules/. Below is a link to download Project with node_modules/.
-Google Drive Link: (https://drive.google.com/open?id=1nMLu_ZwtkHGyX06pKm-albW6Wy-Ih3Wj)
+
+Google Drive Link: (https://goo.gl/nT1kQN)
+
 Note: Anyone at Bigtree Entertainment Pvt. Ltd. with the link can access .zip file directly.
 
 ## Available Commands
