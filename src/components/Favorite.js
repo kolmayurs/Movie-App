@@ -67,8 +67,11 @@ if (!fetchMovie) {
       return (
         <div>
         <Header />
-          <div className="movie-card-container">{movies}</div>
+        <div className="fav-movies-container">
+        <div className="fav_movies_text">Your Favorites :)</div>
+          <div className="fav-movie-card-container">{movies}</div>
           </div>
+        </div>
       )}
 
   }
