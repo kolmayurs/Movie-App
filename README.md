@@ -1,6 +1,6 @@
 # Movie App
 
-![Demo](https://movieappproject.herokuapp.com/)
+Live Demo : (https://movieappproject.herokuapp.com/)
 
 ## Folder Structure
 
@@ -14,30 +14,30 @@ README.md
 package-lock.json
 package.json
 public/
-	index.html
-	favicon.ico
+  index.html
+  favicon.ico
 src/
-	index.js
-	store.js
-	actions/
-		dataActions.js
-	components/
-		App.js
-		Favorite.js
-		Filter.js
-		Header.js
-		Logo.js
-		MovieCard.js
-		MovieCardBox.js
-		Nav.js
-		NoMatch.js
-		NoMatchMovies.js
-	css/
-		styles.css
-	img/
-		logo.png
-	reducers/
-		index.js
+  index.js
+  store.js
+  actions/
+    dataActions.js
+  components/
+    App.js
+    Favorite.js
+    Filter.js
+    Header.js
+    Logo.js
+    MovieCard.js
+    MovieCardBox.js
+    Nav.js
+    NoMatch.js
+    NoMatchMovies.js
+  css/
+    styles.css
+  img/
+    logo.png
+  reducers/
+    index.js
 
 ```
 
