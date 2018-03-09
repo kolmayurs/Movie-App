@@ -11,10 +11,7 @@ constructor(props) {
     this.eventHandler = this.eventHandler.bind(this);
   }
   eventHandler(e) {
-    let favMovies = JSON.parse(localStorage.getItem("key") || "null").split();
-    console.log('Old Movie: ' + favMovies)
     console.log('E Target Value :' + (e.target || e.srcElement).id);
-    favMovies.push((e.target || e.srcElement).id);
     localStorage.setItem("key", JSON.stringify((e.target || e.srcElement).id));
     this.setState((prevState) => ({
         toggle: !prevState.toggle

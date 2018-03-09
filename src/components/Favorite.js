@@ -39,6 +39,7 @@ render(){
     const movie_data = this.props.data;
     let fetchMovie = false;
     let favMovies = JSON.parse(localStorage.getItem("key") || "null");
+
     console.log("FAv Mpvoie :" + favMovies )
   const movies = movie_data.map((dynamicData,key) => {
 
