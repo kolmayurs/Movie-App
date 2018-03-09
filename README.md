@@ -8,19 +8,19 @@ After creation, your project should look like this:
 
 ```
 Movie-App/
-  build/
-  node_modules/
-  README.md
-  package-lock.json
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
+build/
+node_modules/
+README.md
+package-lock.json
+package.json
+public/
+	index.html
+	favicon.ico
+src/
 	index.js
 	store.js
 	actions/
-		/dataActions.js
+		dataActions.js
 	components/
 		App.js
 		Favorite.js
@@ -38,7 +38,7 @@ Movie-App/
 		logo.png
 	reducers/
 		index.js
-		
+
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -58,10 +58,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
@@ -71,8 +67,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](#deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
