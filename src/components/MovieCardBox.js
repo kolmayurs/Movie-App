@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/styles.css';
-import {isFav} from '../actions/dataActions'
+/*import {isFav} from '../actions/dataActions'*/
 
 
 
@@ -10,7 +10,12 @@ constructor(props) {
     this.state = {toggle: true};
     this.eventHandler = this.eventHandler.bind(this);
   }
-  eventHandler(event) {
+  eventHandler(e) {
+    let favMovies = JSON.parse(localStorage.getItem("key") || "null").split();
+    console.log('Old Movie: ' + favMovies)
+    console.log('E Target Value :' + (e.target || e.srcElement).id);
+    favMovies.push((e.target || e.srcElement).id);
+    localStorage.setItem("key", JSON.stringify((e.target || e.srcElement).id));
     this.setState((prevState) => ({
         toggle: !prevState.toggle
       })
@@ -28,7 +33,7 @@ constructor(props) {
             <div className="top-section">
               <div className="date-section">{this.props.date}</div>
               <div className="rating-section">
-                <div className="heart"><i onClick={this.eventHandler} className={this.state.toggle ? 'far fa-heart-o' : 'far fa-heart'}></i></div>
+                <div className="heart"><i onClick={this.eventHandler} id={this.props.title} className={this.state.toggle ? 'far fa-heart-o' : 'far fa-heart'}></i></div>
                 <div className="comment"><i className="far fa-comment-o"></i></div>
                 <div className="star"><i className="fas fa-star"></i>&nbsp;&nbsp;<span className="votes">{this.props.votes}</span></div>
               </div>

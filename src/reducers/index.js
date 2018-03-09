@@ -3,6 +3,7 @@ export default function reducer(state={
   fetched:false,
   data: [],
   error: null,
+  val: [],
   is_fav:false,
 }, action){
   switch(action.type){
@@ -21,13 +22,13 @@ export default function reducer(state={
     case "USERS_SORT" :{
       return{...state, fetching:false, fetched: true, data: action.payload}
     }
-    case "IS_FAV" :{
-      return{...state,is_fav:true , fetched: true, data: action.payload}
+/*    case "IS_FAV" :{
+      return{...state,is_fav:true , fetched: true, val: action.payload}
     }
     case "IS_NOT_FAV" :{
-      return{...state,is_fav:false , fetched: true, data: action.payload}
+      return{...state,is_fav:false , fetched: true, val: action.payload}
     }
-    
+    */
     }
   return state
 }

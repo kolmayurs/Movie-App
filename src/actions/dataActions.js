@@ -13,7 +13,7 @@ export  function fetchData(){
 
 }
 }
-
+/*
  export function isFav(payload) {
   return {
     type: "IS_FAV",
@@ -27,3 +27,4 @@ export function isNotFav(payload) {
     payload
   }
 }
+*/
