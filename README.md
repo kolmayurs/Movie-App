@@ -6,8 +6,6 @@ As .gitignore ignore node_modules/. Below is a link to download Project with nod
 
 Google Drive Link : https://goo.gl/G1Zw7f
 
-Note: Anyone at Bigtree Entertainment Pvt. Ltd. with the link can access .zip file directly.
-
 ## Available Commands
 
 In the project directory, you can run:
