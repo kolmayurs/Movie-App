@@ -12,7 +12,12 @@ constructor(props) {
   eventHandler(e) {
     let target_value = (e.target || e.srcElement).id;
     console.log('E Target Value :' + target_value);
-    localStorage.removeItem(target_value, JSON.stringify(target_value));
+    if(!this.state.toggle){
+      localStorage.setItem(target_value, JSON.stringify(target_value));
+    }
+    else{
+      localStorage.removeItem(target_value, JSON.stringify(target_value));
+    }
     this.setState((prevState) => ({
         toggle: !prevState.toggle,
       })
