@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieCardBox from './MovieCardBox';
+import FavMovieCardBox from './FavMovieCardBox';
 import '../css/styles.css';
 import { connect } from 'react-redux';
 import {fetchData} from '../actions/dataActions'
@@ -44,7 +44,7 @@ render(){
     if (JSON.parse(localStorage.getItem(dynamicData.title)) === dynamicData.title ){
         fetchMovie = true;
             return (
-            <MovieCardBox 
+            <FavMovieCardBox 
               key={'movie_' + key} 
               date={this.date_format(dynamicData.release_date)} 
               image={dynamicData.poster_path} 

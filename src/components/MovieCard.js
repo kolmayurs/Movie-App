@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {fetchData} from '../actions/dataActions'
 import PropTypes from 'prop-types';
 import NoMatchMovies from './NoMatchMovies'
-
+import FavMovieCardBox from './FavMovieCardBox';
 
 function mapStateToProps(state){
   return {
@@ -83,8 +83,35 @@ if(name === 'ALL' || year === 'ALL'){
     }
     let fetchMovie = false;
   const movies = movie_data.map((dynamicData,key) => {
-
+    if (JSON.parse(localStorage.getItem(dynamicData.title)) === dynamicData.title ){
     if (year === '' ){
+        fetchMovie = true;
+            return (
+            <FavMovieCardBox 
+              key={'movie_' + key} 
+              date={this.date_format(dynamicData.release_date)} 
+              image={dynamicData.poster_path} 
+              title={dynamicData.title} 
+              votes={Math.round(dynamicData.vote_average)} 
+              language={dynamicData.original_language}  />
+          )
+
+        }
+    else if ((dynamicData.release_date).includes(year)){
+      fetchMovie = true;
+          return (
+            <FavMovieCardBox 
+              key={'movie_' + key} 
+              date={this.date_format(dynamicData.release_date)} 
+              image={dynamicData.poster_path} 
+              title={dynamicData.title} 
+              votes={Math.round(dynamicData.vote_average)} 
+              language={dynamicData.original_language}  />
+          )
+        }
+      }
+      else{
+        if (year === '' ){
         fetchMovie = true;
             return (
             <MovieCardBox 
@@ -109,6 +136,8 @@ if(name === 'ALL' || year === 'ALL'){
               language={dynamicData.original_language}  />
           )
         }
+
+      }
     });
 if (!fetchMovie) {
     return(
